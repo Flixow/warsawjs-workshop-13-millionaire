@@ -1,9 +1,11 @@
 # #1 Init application
 
 ## Cele:
-- Stworzenie gotowego środowiska za pomocą vue-cli
+- Stworzenie pierwszego komponentu
 
 ## Kroki:
-- [ ] Zainstalowanie vue-cli `npm install -g vue-cli`
-- [ ] Wygenerowanie pełnego template `vue init webpack`
-- [ ] Przenieść stary index.html do komponentu HelloWorld.vue
+- [ ] Stworzyć plik db.js który posłuży nam jako źródło danych
+- [ ] Stworzyć komponent 'Game' który wyświetli pierwsze pytanie i jego odpowiedzi
+- [ ] Stworzyć metodę która zwiększy wartość 'currentQuestion' jeśli wybrana odpowiedź będzie dobra
+- [ ] Stworzyć ostylowany komponent pojedynczego pytania
+- [ ] Stworzyć komponent listy wszystkich pytań z zaznaczeniem na którym pytaniu aktualnie jesteśmy
