@@ -2,46 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello VUE</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>warsawjs-workshop-13-millionaire</title>
   </head>
   <body>
-    <div id="app">
-      <div :class="{ invalid: isInvalid }">
-        {{message}}
-      </div>
-      <ul>
-        <li v-for='element in elements'>
-          {{element}}
-        </li>
-      </ul>
-      <button :disabled='isInvalid'>Submit!</button>
-      <div>{{reversedMessage}}</div>
-      <input v-model="message" placeholder="Type something...">
-    </div>
-
-    <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!',
-        elements: ['yellow', 'red', 'green'],
-      },
-      computed: {
-        reversedMessage: function () {
-          return this.message.split('').reverse().join('')
-        },
-        isInvalid: function () {
-          return this.message.length < 3
-        },
-      },
-    })
-    </script>
-
-    <style>
-      .invalid {
-        color: red
-      }
-    </style>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
   </body>
 </html>
