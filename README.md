@@ -1,13 +1,10 @@
-# #4 Won and lost page - vue router programmatically
+# #5 Vuex
 
 ## Cele:
-- Stworzenie widoku wygranej i przegranej
-- Przekierowywanie vue routera
-- Użycie metody watch
-- Użycie filtra
+- Użycie Vuex jako biblioteki zarządania stanem aplikacji
+- Zrozumienie różnic pomiędzy actions a mutations
 
 ## Kroki:
-- [ ] Stworzyć widoki wygranej i przegranej
-- [ ] Ustawiać wartość aktualnego stanu gry (won, lost) podczas sprawdzania odpowiedzi
-- [ ] Nasłuchiwać na zmianę wartości stanu gry i przekierować na stronę wygranej lub przegranej
-- [ ] Dodać filtr dla waluty (vendor.js)
+- [ ] Zainstalować vuex
+- [ ] Utworzyć store oraz go dodać do main.js
+- [ ] Skorzystać ze stora w Game.vue, dispatch `initGame` w metodzie 'created'

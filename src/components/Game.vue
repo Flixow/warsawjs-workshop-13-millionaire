@@ -9,7 +9,7 @@
     <div class="Sidebar">
       <questions-list
         :questions='questions'
-        :currentIndex='currentQuestionIndex'
+        :currentIndex='currentRound'
       />
     </div>
   </div>
@@ -17,50 +17,33 @@
 
 <script>
 import data from '../../db.js'
+import {mapGetters, mapMutations} from 'vuex'
 import QuestionCard from './QuestionCard'
 import QuestionsList from './QuestionsList'
-
-const STATES = {
-  NOT_PLAYING: 'NOT_PLAYING',
-  PLAYING: 'PLAYING',
-  WON: 'WON',
-  LOST: 'LOST',
-}
+import {STATES} from '../common/const'
 
 export default {
   name: 'Game',
+  created () {
+    this.$store.dispatch('initGame')
+  },
   components: {
     QuestionCard,
     QuestionsList,
   },
-  data: () => ({
-    state: STATES.NOT_PLAYING,
-    currentQuestionIndex: 0,
-    questions: data.questions,
-  }),
   methods: {
-    checkAnswer: function (answer) {
-      const isCorrectAnswer = this.currentQuestion.correct_answer === answer
-      if (isCorrectAnswer) {
-        this.currentQuestionIndex++
-
-        if (this.currentQuestionIndex > this.questions.length - 1) {
-          this.state = STATES.WON
-        } else {
-          this.state = STATES.PLAYING
-        }
-      } else {
-        this.state = STATES.LOST
-      }
-    }
+    ...mapMutations([
+      'checkAnswer'
+    ]),
   },
-  computed: {
-    currentQuestion: function (index) {
-      return this.questions[this.currentQuestionIndex] || {}
-    },
-  },
+  computed: mapGetters({
+    questions: 'questions',
+    currentQuestion: 'currentQuestion',
+    currentRound: 'currentRound',
+    status: 'status',
+  }),
   watch: {
-    state (value, oldValue) {
+    status (value, oldValue) {
       if (value === STATES.LOST) {
         this.$router.push({name: 'lost'})
       } else if (value === STATES.WON) {
