@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Game />
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,9 +9,6 @@ import Game from './components/Game'
 
 export default {
   name: 'app',
-  components: {
-    Game
-  }
 }
 </script>
 
