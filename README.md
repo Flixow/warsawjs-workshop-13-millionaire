@@ -1,4 +1,4 @@
-# #1 Init application
+# #1 Game page
 
 ## Cele:
 - Stworzenie pierwszego komponentu
