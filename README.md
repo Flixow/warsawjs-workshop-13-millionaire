@@ -1,10 +1,13 @@
-# #2 Vue router
+# #4 Won and lost page - vue router programmatically
 
 ## Cele:
-- Zapoznanie się z vue-router
+- Stworzenie widoku wygranej i przegranej
+- Przekierowywanie vue routera
+- Użycie metody watch
+- Użycie filtra
 
 ## Kroki:
-- [ ] Zainstalowanie `vue-router` do projektu
-- [ ] Dodać plik router.js z intro i game routes
-- [ ] Stworzyć komponent Intro z linkiem do url /game
-- [ ] Wyświetlić <router-view> w App.vue
+- [ ] Stworzyć widoki wygranej i przegranej
+- [ ] Ustawiać wartość aktualnego stanu gry (won, lost) podczas sprawdzania odpowiedzi
+- [ ] Nasłuchiwać na zmianę wartości stanu gry i przekierować na stronę wygranej lub przegranej
+- [ ] Dodać filtr dla waluty (vendor.js)

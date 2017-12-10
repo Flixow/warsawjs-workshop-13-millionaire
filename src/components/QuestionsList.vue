@@ -8,7 +8,7 @@
         Question {{index + 1}}
       </div>
       <div>
-        Question worth {{prizes[index]}} zł
+        Question worth {{prizes[index] | currency}}
       </div>
     </li>
   </ol>
